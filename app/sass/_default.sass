@@ -1,0 +1,107 @@
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+h1, h2, h3, h4
+	margin: 0
+	
+h1, h2
+	font-weight: 700
+h1
+	font-size: 54px
+h2
+	font-size: 50px
+h3
+	font-size: 32px
+	font-weight: 500
+
+a
+	color: #fff
+	transition: .3s ease-in
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #fff
+		opacity: .6
+
+button, a
+	outline: none
+	border: 0
+	&:focus
+		outline: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+label
+	margin-bottom: 0
+
+body
+	position: relative
+	max-width: 1920px
+	min-width: 320px
+	margin: 0 auto
+	background-color: $bg-color
+	font-size: 16px
+	line-height: 1.2
+	font-family: 'FuturaPT', sans-serif
+	font-weight: 300
+	overflow-x: hidden
+	color: $text
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		display: block
+		background-image: url(../img/_src/lines_bg.svg)
+		background-repeat: no-repeat
+		width: 601px
+		height: 100%
+		left: 366px
+		z-index: 2
+		// background-size: 100% 100%
+
+.ico-block
+	position: relative
+	padding: 25px
+	margin-right: 25px
+	background-color: $accent
+	svg
+		position: absolute
+		top: 50%
+		right: 50%
+		transform: translate(50%, -50%)
+
+.btn
+	display: block
+	&-modal
+		padding: 30px 25px
+		background-color: $accent
+		font-size: 26px
+		font-weight: 700
+		color: #fff
+		transition: .2s
+		&::before
+			content: ''
+			position: relative
+			display: block
+			margin-bottom: 45px
+			width: 0
+			height: 0
+			border-top: 15px solid #fff
+			border-right: 15px solid transparent
+		&:hover
+			color: #fff
+			transform: translateY(-10px)
