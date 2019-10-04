@@ -1,23 +1,25 @@
 .navbar
+    height: 65px
     &-nav
         li.nav-item
-            margin-right: 50px
+            margin-right: 25px
             &:last-child
                 margin-right: 0
-            &.active a.nav-link
-                color: darken($accent, 8%)
             a.nav-link
                 padding: 0
-                font-size: 14px
-                font-weight: 500
+                font-size: 15px
                 text-transform: uppercase
-                color: #fff
-                &:hover,
-                &:focus
-                    color: #fff
+                font-weight: 600
                 &.active
-                    color: #fff
-                    opacity: .6
+                    position: relative
+                    &::after
+                        content: ''
+                        display: block
+                        position: relative
+                        top: 10px
+                        width: 100%
+                        height: 1px
+                        background-color: #565656
 
     .navbar-toggler
         width: 50px
@@ -28,8 +30,3 @@
             width: 50px
             height: 50px
             background-image: none
-            circle
-                fill: #fff !important
-            line
-                stroke: $accent !important
-        
