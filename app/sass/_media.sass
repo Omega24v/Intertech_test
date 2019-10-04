@@ -6,14 +6,60 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+    header .navbar-nav li.nav-item
+        a.nav-link
+            font-size: 12px
+
 // ≥992px
 +media-breakpoint-down(md)
+
+    header 
+        .container .col-9
+            &::before
+                display: none
+        .navbar
+            margin-top: 20px
+            width: 100%
+            height: auto
+            &-nav 
+                margin-top: 20px
+                li.nav-item 
+                    margin-bottom: 10px
+                    a.nav-link.active::after
+                        display: none
+        .search-form
+            margin-top: 20px
+
+    section
+        margin-top: 20px
+        .project
+            margin-top: 40px
+        h5.section-title
+            margin-bottom: 20px
 
 // ≥768px
 +media-breakpoint-down(sm)
 
+    section .blog .blog-list
+        grid-gap: 10px
+
+    // footer .social__item
+    //     height: 24px
+
 // ≥576px
 +media-breakpoint-down(xs)
+
+    h1
+        font-size: 24px
+
+    header form label
+        width: 100%
+
+    section 
+        .blog .blog-list
+            grid-template-columns: repeat(1, auto)
+        .project-grid
+            grid-template-columns: repeat(2, auto)
 
 
 /*==========  Mobile First  ==========*/
